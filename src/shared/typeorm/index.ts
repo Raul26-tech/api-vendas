@@ -10,15 +10,6 @@ export const AppDatasource = new DataSource({
   password: enviroment.DB_PASSWORD,
 });
 
-// export const AppDatasource = new DataSource({
-//   type: 'postgres',
-//   database: 'apivendas',
-//   port: 5432,
-//   host: 'localhost',
-//   username: 'postgres',
-//   password: '1234',
-// });
-
 export const connectDb = async () => {
   try {
     const dataSource = await AppDatasource.initialize();
