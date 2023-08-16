@@ -8,6 +8,7 @@ export const AppDatasource = new DataSource({
   host: enviroment.DB_HOST,
   username: enviroment.DB_USERNAME,
   password: enviroment.DB_PASSWORD,
+  migrations: ['./src/shared/typeorm/migration/*.ts'],
 });
 
 export const connectDb = async () => {
